@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <form action="my_error.php" method="post" name="post">
+    <form action="error_log.php" method="post" name="post">
     
         <input type="number" name="number">
         <input type="submit" name="submit">
@@ -33,9 +33,9 @@ try {
 }
 
 catch(Exception $e) {
-    echo '' .$e->getMessage();
+    error_log("het gegeven nummer is niet goed", 3, "error.log");
 }
-    ?>
+?>
 
 </body>
 </html>
